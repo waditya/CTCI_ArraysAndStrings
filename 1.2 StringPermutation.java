@@ -30,6 +30,8 @@ public class SortAndCompare {
 	}
 }
 
+//Second Method of checking if First String is permjutation of Second.
+
 /*----MAIN FUNCTION---------------------------------------------------------*/
 
 
