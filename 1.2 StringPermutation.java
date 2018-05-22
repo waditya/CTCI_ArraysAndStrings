@@ -30,7 +30,70 @@ public class SortAndCompare {
 	}
 }
 
-//Second Method of checking if First String is permjutation of Second.
+//Class //Second Method of checking if First String is permjutation of Second..java
+
+//Class CheckLengthAndCompare.java
+
+import java.util.Arrays;
+public class CheckLengthAndCompare {
+	String str1;
+	String str2;
+
+	public CheckLengthAndCompare(String str1, String str2) {
+		// TODO Auto-generated constructor stub
+		this.str1 = str1;
+		this.str2=str2;
+	}
+	
+	public boolean checkPermutation() {
+		
+		//If the 2 strings have different lengths, they 
+		//cannot be permutations of each other
+		
+		if (this.str1.length()!=this.str2.length()) {
+			return false;
+		}
+		
+		//Assumption - 128 characters are used to create Strings
+		int [] letters_count = new int [128];
+		
+		//Convert the strings into character array to make them iterate
+		
+		char[] str1_array = this.str1.toCharArray();
+		char[] str2_array = this.str2.toCharArray();
+		
+		//Check the First String by iterating over it and add the 
+		//number of occurrences for each character by incrementing the 
+		//count in letters_count array
+		
+		for(char ch: str1_array) {
+			int val = ch; // Get ASCII value of the character
+			letters_count[val]++;
+		}
+		
+		//Check the Second String by iterating over it for number of occurrences
+		//of a character in the string. Compare it with previous string by 
+		//decrementing it from letters_count array 
+		
+		for(char ch: str2_array) {
+			int val = ch; // Get ASCII value of the character
+			letters_count[val]--;
+			
+			if(letters_count[val] < 0) {
+				//The 2nd string has more occurrence of character
+				//in comparison with 1st String
+				
+				return false;
+			}
+		}
+		
+		
+		return true;
+	}
+
+}
+
+
 
 /*----MAIN FUNCTION---------------------------------------------------------*/
 
