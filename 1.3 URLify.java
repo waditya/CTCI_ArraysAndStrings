@@ -16,3 +16,6 @@ public class Entry {
 
 }
 
+/** Core Functional Classes**/
+
+
