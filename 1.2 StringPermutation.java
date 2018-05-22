@@ -98,6 +98,7 @@ public class CheckLengthAndCompare {
 /*----MAIN FUNCTION---------------------------------------------------------*/
 
 
+
 public class Entry {
 	
 	
@@ -112,10 +113,19 @@ public class Entry {
 		System.out.println("Method - 1 : Sort and Equate \nMethod Complexity : O(log(n)))\n");
 		
 		SortAndCompare sac1 = new  SortAndCompare(str1, str2);
-		Boolean flag1 = sac1.checkEquality();
 		SortAndCompare sac2 = new  SortAndCompare(str3, str4);
-		Boolean flag2 = sac2.checkEquality();
 		SortAndCompare sac3 = new  SortAndCompare(str5, str6);
+		
+		CheckLengthAndCompare clac1 = new CheckLengthAndCompare(str1, str2);
+		CheckLengthAndCompare clac2 = new CheckLengthAndCompare(str3, str4);
+		CheckLengthAndCompare clac3 = new CheckLengthAndCompare(str5, str6);
+		
+		
+		
+		Boolean flag1 = sac1.checkEquality();
+		
+		Boolean flag2 = sac2.checkEquality();
+		
 		Boolean flag3 = sac3.checkEquality();
 		
 		
@@ -136,7 +146,36 @@ public class Entry {
 		}else {
 			System.out.println(str5+" and "+str6+" are not permutations of each other");
 		}
+		
+		
+		System.out.println("\n\nMethod - 2 :Check Length and Compare Method \nMethod Complexity : O[N]\n");
+		
+		Boolean flag4 = clac1.checkPermutation();
+		
+		Boolean flag5 = clac2.checkPermutation();
+		
+		Boolean flag6 = clac3.checkPermutation();
+		
+		if(flag4) {
+			System.out.println(str1+" and "+str1+" are permutations of each other");
+		}else {
+			System.out.println(str1+" and "+str1+" are not permutations of each other");
+		}
+		
+		if(flag5) {
+			System.out.println(str3+" and "+str4+" are permutations of each other");
+		}else {
+			System.out.println(str3+" and "+str4+" are not permutations of each other");
+		}
+		
+		if(flag6) {
+			System.out.println(str5+" and "+str6+" are permutations of each other");
+		}else {
+			System.out.println(str5+" and "+str6+" are not permutations of each other");
+		}
+		
 	}
 }
+
 
 
