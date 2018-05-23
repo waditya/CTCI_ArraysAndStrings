@@ -47,3 +47,33 @@ public boolean checkPalindromePermutation(String str) {
 }
 /********************************************************************************/
 /********Main Class****************************************************/
+import CoreLogic.PalindromePermutation;
+
+public class Entry {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String str1 = "Tact  Coa";
+		String str2 = "Tact Coa";
+		
+		PalindromePermutation pp1 = new PalindromePermutation();
+		PalindromePermutation pp2 = new PalindromePermutation();
+		
+		System.out.println("\n---Check Palindrome Permutation---\n");
+		System.out.println("String to be checked is : "+str1);
+		displayResult(pp1.checkPalindromePermutation(str1));
+		System.out.println("String to be checked is : "+str2);
+		displayResult(pp1.checkPalindromePermutation(str2));
+		
+		
+	}
+	
+	public static void displayResult(Boolean result) {
+		if(result) {
+			System.out.println("\nThe String is a Palindrome Permutation\n");
+		}else {
+			System.out.println("\nThe String is not a Palindrome Permutation\n");
+		}
+	}
+
+}
