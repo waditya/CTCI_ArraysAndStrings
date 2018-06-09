@@ -42,9 +42,28 @@ public class CompressString {
 		}
 		return compressedString.length()<str.length()? compressedString:str;
 	}
+	
+	public String compressBetter(String str) {
+		
+		StringBuilder compressed = new StringBuilder();
+		int countConsecutive = 0;
+		
+		
+		for(int j = 0 ; j < str.length(); j++) {
+			countConsecutive++;			
+
+		/*If next character is different than current character,
+		 * append this character to the result*/
+			//System.out.println("j is : "+j+" Character at j is : "+str.charAt(j));
+			if(j+1 >= str.length() || str.charAt(j) != str.charAt(j+1)) {
+				
+				compressed.append(str.charAt(j));
+				compressed.append(countConsecutive);
+				countConsecutive = 0;				
+			}		
+			
+		}
+		return compressed.length() < str.length()? compressed.toString(): str;
+	}
 
 }
-
-
-
-
