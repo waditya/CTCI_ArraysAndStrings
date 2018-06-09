@@ -10,6 +10,7 @@ public class Entry {
 		// TODO Auto-generated method stub 
 		CompressString cs = new CompressString();
 		System.out.println(cs.compressBad("aabcccccaa"));;
+		System.out.println(cs.compressBetter("aabcccccaa"));;
 		
 
 	}
